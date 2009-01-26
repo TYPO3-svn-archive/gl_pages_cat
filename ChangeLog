@@ -2,6 +2,14 @@
 
 2009-01-09  Manuel Rego Casasnovas  <mrego@igalia.com>
 
+	* class.tx_glpagescat_div.php: (getPageCategories) Now this method
+	returns a comma-separted list of uids.
+	* doc/manual.sxw: Added explanation to use this extension with tt_news
+	plugins (thanks to Daniel Huf <dhuf@cross-systems.com>).
+
+
+2009-01-09  Manuel Rego Casasnovas  <mrego@igalia.com>
+
 	* class.tx_glpagescat_div.php: (getPageCategories) Added a new method
 	to get the categories of current page.
 

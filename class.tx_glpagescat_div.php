@@ -51,7 +51,7 @@ class tx_glpagescat_div {
 		$rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
 			'uid_local',
 			'tt_news_cat_mm',
-			'uid_foreign IN (' . implode(',', $categories) . ')'
+			'uid_foreign IN (' . $categories . ')'
 		);
 
 		foreach ($rows as $row) {
@@ -66,7 +66,7 @@ class tx_glpagescat_div {
 	 *
 	 * @param	boolean		$recursive	[false] If it's true it
 	 * returns the page categories and subcaterories of these categories.
-	 * @return	array		Array with categories uid
+	 * @return	string		Comma-separated list of categories uid
 	 */
 	function getPageCategories($recursive = false) {
 		$rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
@@ -85,7 +85,7 @@ class tx_glpagescat_div {
 			}
 		}
 
-		return $categories;
+		return implode(',', $categories);
 	}
 
 	/**
