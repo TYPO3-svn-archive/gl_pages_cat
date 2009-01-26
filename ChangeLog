@@ -1,5 +1,10 @@
 (add new changes on top of this file)
 
+2008-12-12  Manuel Rego Casasnovas  <mrego@igalia.com>
+
+	* class.tx_glpagescat_div.php: (getNewsCategorized) Fixed a bug when a
+	page does not have categories
+
 2008-12-03  Manuel Rego Casasnovas  <mrego@igalia.com>
 
 	* First public release

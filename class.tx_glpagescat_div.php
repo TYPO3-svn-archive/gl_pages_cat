@@ -56,6 +56,10 @@ class tx_glpagescat_div {
 			}
 		}
 
+		if (!$categories) {
+			return;
+		}
+
 		$rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
 			'uid_local',
 			'tt_news_cat_mm',
