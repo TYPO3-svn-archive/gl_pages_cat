@@ -42,19 +42,7 @@ class tx_glpagescat_div {
 	 * @return	array		Array with news uid
 	 */
 	function getNewsCategorized($recursive = false) {
-		$rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
-			'DISTINCT uid_foreign',
-			'pages_cat_mm',
-			'uid_local="' . $GLOBALS['TSFE']->id . '"'
-		);
-
-		foreach ($rows as $row) {
-			$categories[] = $row['uid_foreign'];
-			if ($recursive) {
-				$categories = array_merge($categories,
-						tx_glpagescat_div::getSubCategories($row['uid_foreign']));
-			}
-		}
+		$categories = tx_glpagescat_div::getPageCategories($recursive);
 
 		if (!$categories) {
 			return;
@@ -71,6 +59,33 @@ class tx_glpagescat_div {
 		}
 
 		return $news;
+	}
+
+	/**
+	 * Returns the categories of the current page.
+	 *
+	 * @param	boolean		$recursive	[false] If it's true it
+	 * returns the page categories and subcaterories of these categories.
+	 * @return	array		Array with categories uid
+	 */
+	function getPageCategories($recursive = false) {
+		$rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
+			'DISTINCT uid_foreign',
+			'pages_cat_mm',
+			'uid_local="' . $GLOBALS['TSFE']->id . '"'
+		);
+
+		$categories = array();
+
+		foreach ($rows as $row) {
+			$categories[] = $row['uid_foreign'];
+			if ($recursive) {
+				$categories = array_merge($categories,
+						tx_glpagescat_div::getSubCategories($row['uid_foreign']));
+			}
+		}
+
+		return $categories;
 	}
 
 	/**

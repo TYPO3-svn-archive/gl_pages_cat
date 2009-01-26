@@ -1,5 +1,11 @@
 (add new changes on top of this file)
 
+2009-01-09  Manuel Rego Casasnovas  <mrego@igalia.com>
+
+	* class.tx_glpagescat_div.php: (getPageCategories) Added a new method
+	to get the categories of current page.
+
+
 2009-01-05  Manuel Rego Casasnovas  <mrego@igalia.com>
 
 	* ext_emconf.php: Added "pages" table to "modify_tables" property.
