@@ -1,9 +1,15 @@
 (add new changes on top of this file)
 
+2009-01-05  Manuel Rego Casasnovas  <mrego@igalia.com>
+
+	* ext_emconf.php: Added "pages" table to "modify_tables" property.
+
+
 2008-12-12  Manuel Rego Casasnovas  <mrego@igalia.com>
 
 	* class.tx_glpagescat_div.php: (getNewsCategorized) Fixed a bug when a
 	page does not have categories
+
 
 2008-12-03  Manuel Rego Casasnovas  <mrego@igalia.com>
 

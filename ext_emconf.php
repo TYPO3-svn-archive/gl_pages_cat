@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext: "gl_pages_cat"
 #
-# Auto generated 26-01-2009 08:28
+# Auto generated 26-01-2009 08:32
 #
 # Manual updates:
 # Only the data in the array - anything else is removed by next write.
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'Relate pages with tt_news categories.',
 	'category' => 'be',
 	'shy' => 0,
-	'version' => '0.1.1',
+	'version' => '0.1.2',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'state' => 'beta',
 	'uploadfolder' => 0,
 	'createDirs' => '',
-	'modify_tables' => '',
+	'modify_tables' => 'pages',
 	'clearcacheonload' => 0,
 	'lockType' => '',
 	'author' => 'Manuel Rego Casasnovas [Igalia]',
@@ -41,7 +41,7 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 		),
 	),
-	'_md5_values_when_last_written' => 'a:8:{s:9:"ChangeLog";s:4:"543e";s:27:"class.tx_glpagescat_div.php";s:4:"87e1";s:21:"ext_conf_template.txt";s:4:"f103";s:12:"ext_icon.gif";s:4:"585d";s:14:"ext_tables.php";s:4:"0746";s:14:"ext_tables.sql";s:4:"4eb9";s:16:"locallang_db.xml";s:4:"c33a";s:14:"doc/manual.sxw";s:4:"a3d1";}',
+	'_md5_values_when_last_written' => 'a:8:{s:9:"ChangeLog";s:4:"07be";s:27:"class.tx_glpagescat_div.php";s:4:"87e1";s:21:"ext_conf_template.txt";s:4:"f103";s:12:"ext_icon.gif";s:4:"585d";s:14:"ext_tables.php";s:4:"0746";s:14:"ext_tables.sql";s:4:"4eb9";s:16:"locallang_db.xml";s:4:"c33a";s:14:"doc/manual.sxw";s:4:"a3d1";}',
 );
 
 ?>
