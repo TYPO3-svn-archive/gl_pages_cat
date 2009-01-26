@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'gl_pages_cat'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pages.tx_glpagescat_category">Category</label>
+		</languageKey>
+		<languageKey index="ga" type="array">
+			<label index="pages.tx_glpagescat_category">Categoría</label>
+		</languageKey>
+		<languageKey index="es" type="array">
+			<label index="pages.tx_glpagescat_category">Categoría</label>
+		</languageKey>
+	</data>
+</T3locallang>

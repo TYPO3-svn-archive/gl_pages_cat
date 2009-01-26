@@ -1,0 +1,9 @@
+# cat=basic//10; type=boolean; label= use "general record storage page": this option configures the handling of news categories in backend forms and on the website (frontend).
+useStoragePid = 1
+
+# cat=basic/enable/190; type=boolean; label=Require categories: Check if categories are required for every news item.
+requireCategories = 0
+
+# cat=basic/dims/80; type=int [3-30]; label= Max height for category trees: Here you can configure the maximum height of category trees in BackEnd forms.
+categoryTreeHeigth = 5
+
