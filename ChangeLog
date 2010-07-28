@@ -2,6 +2,11 @@
 
 2010-07-28  Manuel Rego Casasnovas  <mrego@igalia.com>
 
+	* ext_emconf.php: Bump to version 0.1.5.
+
+
+2010-07-28  Manuel Rego Casasnovas  <mrego@igalia.com>
+
 	* class.tx_glpagescat_div.php: (getNewsCategorized)
 	(getNewsCategorizedByCategories) Moved some common code to create a new
 	function.
