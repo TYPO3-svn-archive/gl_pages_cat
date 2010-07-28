@@ -2,6 +2,13 @@
 
 2010-07-28  Manuel Rego Casasnovas  <mrego@igalia.com>
 
+	* class.tx_glpagescat_div.php: (getNewsCategorized)
+	(getNewsCategorizedByCategories) Moved some common code to create a new
+	function.
+
+
+2010-07-28  Manuel Rego Casasnovas  <mrego@igalia.com>
+
 	* ext_tables.php: [Bug #7035] Fixed bug displaying category tree with
 	tt_news 3.0.1 (thanks to Jason Steiner for reporting).
 

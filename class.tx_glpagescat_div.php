@@ -43,22 +43,7 @@ class tx_glpagescat_div {
 	 */
 	function getNewsCategorized($recursive = false) {
 		$categories = tx_glpagescat_div::getPageCategories($recursive);
-
-		if (!$categories) {
-			return;
-		}
-
-		$rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
-			'uid_local',
-			'tt_news_cat_mm',
-			'uid_foreign IN (' . $categories . ')'
-		);
-
-		foreach ($rows as $row) {
-			$news[] = $row['uid_local'];
-		}
-
-		return $news;
+		return tx_glpagescat_div::getNewsCategorizedByCategories($categories);
 	}
 
 	/**
@@ -113,9 +98,35 @@ class tx_glpagescat_div {
 		return $categories;
 	}
 
+	/**
+	 * Returns news with some category that match with the categories passed
+	 * as argument.
+	 *
+	 * @param	string	$categories	Comma separted list of category
+	 * uids.
+	 * @return	array 	Array with news uid
+	 */
+	function getNewsCategorizedByCategories($categories) {
+		if (!$categories) {
+			return;
+		}
+
+		$rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
+			'uid_local',
+			'tt_news_cat_mm',
+			'uid_foreign IN (' . $categories . ')'
+		);
+
+		foreach ($rows as $row) {
+			$news[] = $row['uid_local'];
+		}
+
+		return $news;
+	}
+
 }
 
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/gl_pages_cat/class.tx_glpagescat_div.php'])	{
+if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/gl_pages_cat/class.tx_glpagescat_div.php']) {
 	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/gl_pages_cat/class.tx_glpagescat_div.php']);
 }
 
